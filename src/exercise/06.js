@@ -88,7 +88,9 @@ function useToggle({
   const on = onIsControlled ? controlledOn : state.on
 
   if (process.env.NODE_ENV !== 'production') {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useControlledSwitchWarning(controlledOn, 'on', 'useToggle')
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useOnChangeReadOnlyWarning(
       controlledOn,
       'on',
